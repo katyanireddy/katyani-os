@@ -1,10 +1,12 @@
 import Hero from "../components/Hero";
+import Modules from "../sections/Modules";
 
 function App() {
   return (
-    <main className="bg-[#050816]">
+    <>
       <Hero />
-    </main>
+      <Modules />
+    </>
   );
 }
 

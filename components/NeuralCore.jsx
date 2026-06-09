@@ -27,7 +27,7 @@ function Sphere() {
 
   return (
     <mesh ref={sphereRef}>
-      <sphereGeometry args={[5,128,128]} />
+      <sphereGeometry args={[3.8,128,128]} />
       <meshStandardMaterial
         wireframe
         color="#8b5cf6"
@@ -59,7 +59,7 @@ export default function NeuralCore() {
 </mesh>
 
       <mesh>
-        <sphereGeometry args={[6,64,64]} />
+        <sphereGeometry args={[4.5,64,64]} />
         <meshStandardMaterial
   wireframe
   color="#8b5cf6"
