@@ -2,6 +2,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useRef } from "react";
 import { Stars } from "@react-three/drei";
+import { Points, PointMaterial } from "@react-three/drei";
 
 function Sphere() {
 

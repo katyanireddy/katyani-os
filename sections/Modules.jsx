@@ -68,7 +68,7 @@ export default function Modules() {
             <p className="mb-4 text-cyan-400 tracking-[6px]">
             // CORE MODULES
             </p>
-
+<div className="mb-8 h-px w-full bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
             <h2 className="mb-16 text-5xl font-bold">
             My Technical Modules
             </h2>

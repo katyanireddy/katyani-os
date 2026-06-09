@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import AboutPanel from "./AboutPanel";
 import FloatingModule from "./FloatingModule";
 
+
 export default function Hero() {
   return (
     <section className="relative h-screen overflow-hidden bg-[#050816]">
@@ -101,6 +102,18 @@ export default function Hero() {
     <AboutPanel />
 
   </div>
+  <div
+  className="
+  pointer-events-none
+  absolute
+  inset-0
+  opacity-[0.03]
+  "
+  style={{
+    backgroundImage:
+      "repeating-linear-gradient(0deg, transparent, transparent 2px, white 3px)"
+  }}
+/>
 
 </section>
   );
