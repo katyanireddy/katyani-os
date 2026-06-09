@@ -9,6 +9,8 @@ import {
   SiOpenai,
   SiJavascript,
 } from "react-icons/si";
+import { motion } from "framer-motion";
+import { fadeUp } from "../src/animations";
 
 const modules = [
   {
@@ -45,10 +47,15 @@ const modules = [
 
 export default function Modules() {
   return (
-    <section
-      id="modules"
-      className="relative py-32 px-10"
-    >
+    <motion.section
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true }}
+  id="modules"
+  className="relative py-32 px-10"
+>
+     
         {/* Background Grid */}
       <div
         className="
@@ -80,10 +87,23 @@ export default function Modules() {
           lg:grid-cols-3
           gap-8
         ">
-            {modules.map((module) => (
-            <div
-              key={module.title}
-               className="
+            {modules.map((module, index) => (
+
+<motion.div
+  initial={{
+    opacity: 0,
+    y: 30
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0
+  }}
+ viewport={{ once: true }}
+  transition={{
+    delay: index * 0.1
+  }}
+  key={module.title}
+  className="
     group
     relative
     overflow-hidden
@@ -99,7 +119,10 @@ export default function Modules() {
     hover:-translate-y-3
     hover:shadow-[0_0_40px_rgba(34,211,238,0.2)]
     "
-            >
+>
+
+    
+           
 
                 {/* Glow Layer */}
     <div
@@ -140,12 +163,14 @@ export default function Modules() {
                 {module.desc}
               </p>
             </div>
-            </div>
+            </motion.div>
           ))}
           
         </div>
 
       </div>
-    </section>
+      
+    </motion.section>
+    
   );
 }

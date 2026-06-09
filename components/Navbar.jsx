@@ -1,6 +1,23 @@
 export default function Navbar() {
   return (
-    <nav className="absolute top-0 left-0 z-50 w-full px-10 py-6">
+    <nav
+className="
+fixed
+top-4
+left-1/2
+-translate-x-1/2
+w-[90%]
+max-w-6xl
+z-50
+rounded-2xl
+border
+border-white/10
+bg-white/5
+backdrop-blur-xl
+px-8
+py-4
+"
+>
       <div className="mx-auto flex max-w-7xl items-center justify-between">
 
         <h1 className="font-semibold tracking-widest text-white">

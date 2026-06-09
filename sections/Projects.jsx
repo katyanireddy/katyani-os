@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { fadeUp } from "../src/animations";
 const projects = [
   {
     id: "001",
@@ -44,10 +46,16 @@ const getStatusColor = (status) => {
 
 export default function Projects() {
   return (
-    <section
-      id="systems"
-      className="relative py-32 px-10"
-    >
+    <motion.section
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true }}
+  id="systems"
+className="relative py-32 px-10"
+    
+>
+      
       <div className="mx-auto max-w-7xl">
 <div className="mb-10 h-px w-full bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
         <p className="mb-4 text-cyan-400 tracking-[6px]">
@@ -146,6 +154,6 @@ export default function Projects() {
 
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

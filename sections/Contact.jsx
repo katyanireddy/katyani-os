@@ -4,10 +4,16 @@ import {
   FaEnvelope,
   FaFileAlt
 } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { fadeUp } from "../src/animations";
 
 export default function Contact() {
   return (
-    <section
+   <motion.section
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true }}
       id="contact"
       className="relative py-32 px-10"
     >
@@ -129,6 +135,6 @@ export default function Contact() {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -13,6 +13,8 @@ import {
   SiSupabase,
   SiMongodb
 } from "react-icons/si";
+import { motion } from "framer-motion";
+import { fadeUp } from "../src/animations";
 
 const techStack = [
   { icon: <FaReact />, name: "React" },
@@ -29,7 +31,12 @@ const techStack = [
 
 export default function TechUniverse() {
   return (
-    <section
+    <motion.section
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true }}
+
       className="relative py-32 px-10"
       id="tech"
     >
@@ -110,6 +117,6 @@ export default function TechUniverse() {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }

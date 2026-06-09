@@ -53,6 +53,11 @@ export default function NeuralCore() {
         intensity={50}
         color="#22d3ee"
       />
+      <pointLight
+ position={[0,0,0]}
+ intensity={80}
+ color="#22d3ee"
+/>
 
       <mesh>
   <sphereGeometry args={[0.3,32,32]} />
@@ -88,6 +93,10 @@ export default function NeuralCore() {
     transparent
     opacity={0.03}
   />
+</mesh>
+<mesh>
+  <sphereGeometry args={[0.25, 32, 32]} />
+  <meshBasicMaterial color="#22d3ee" />
 </mesh>
 
       <Sphere />

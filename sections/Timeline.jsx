@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { fadeUp } from "../src/animations";
 const timeline = [
   {
     year: "2021",
@@ -33,7 +35,11 @@ const timeline = [
 
 export default function Timeline() {
   return (
-    <section
+    <motion.section
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true }}
       id="journey"
       className="relative py-32 px-10"
     >
@@ -132,7 +138,7 @@ p-8
     Model Accuracy: 92.7%
   </p>
 </div>
-    </section>
+    </motion.section>
     
   );
 }

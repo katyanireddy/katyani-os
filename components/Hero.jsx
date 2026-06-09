@@ -11,6 +11,25 @@ export default function Hero() {
 
   <Navbar />
 
+  {/* Glow Layer */}
+  <div
+  className="
+  absolute
+  left-1/2
+  top-1/2
+  h-[900px]
+  w-[900px]
+  -translate-x-1/2
+  -translate-y-1/2
+  rounded-full
+  bg-gradient-to-r
+  from-cyan-500/10
+  via-purple-500/10
+  to-cyan-500/10
+  blur-[200px]
+  "
+/>
+
   <div className="absolute inset-0">
     <NeuralCore />
 <FloatingModule
@@ -88,7 +107,10 @@ export default function Hero() {
   py-3
   bg-cyan-500/10
   hover:bg-cyan-500/20
-  transition
+  hover:scale-105
+hover:shadow-[0_0_25px_rgba(34,211,238,.5)]
+transition-all
+duration-300
   ">
     Enter The Model →
   </button>
